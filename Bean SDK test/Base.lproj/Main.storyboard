@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bean_SDK_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6r-4o-Aqa">
+                                <rect key="frame" x="68" y="120" width="240" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ioo-65-Ek7">
+                                        <rect key="frame" x="45" y="25" width="150" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LED: ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01P-v4-1AH">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="1eI-1p-Pw8"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="SCy-Sa-nuS"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qjM-ak-OCZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="uKo-86-Hce"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-e5-m20">
+                                                <rect key="frame" x="0.0" y="50" width="150" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="Es8-oJ-pd1"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Qfw-bT-nt4"/>
+                                                    <constraint firstAttribute="height" constant="50" id="hQC-6q-0hP"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iKG-IC-U46"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Press"/>
+                                                <connections>
+                                                    <action selector="pressMeButtonToToggleLED:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E9n-er-zc0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="XOd-e5-m20" firstAttribute="centerX" secondItem="Ioo-65-Ek7" secondAttribute="centerX" id="a2h-94-m4a"/>
+                                            <constraint firstItem="01P-v4-1AH" firstAttribute="centerX" secondItem="Ioo-65-Ek7" secondAttribute="centerX" id="woy-C0-Uaw"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="2FB-Mb-SRF"/>
+                                    <constraint firstItem="Ioo-65-Ek7" firstAttribute="centerX" secondItem="g6r-4o-Aqa" secondAttribute="centerX" id="JwA-xb-p96"/>
+                                    <constraint firstAttribute="width" constant="240" id="hT9-ws-TNN"/>
+                                    <constraint firstItem="Ioo-65-Ek7" firstAttribute="centerY" secondItem="g6r-4o-Aqa" secondAttribute="centerY" id="vFl-Ns-h31"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g6r-4o-Aqa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WO6-L3-Qu1"/>
+                            <constraint firstItem="g6r-4o-Aqa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="p3g-jO-0vX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ledTextLabel" destination="01P-v4-1AH" id="8md-hp-rwT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
